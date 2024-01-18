@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
     var elements = document.querySelectorAll('.timer, .colon');
     var regClose = document.querySelector('.reg-close');
+    var registerBtn = document.querySelector('.reg-btn-mobile');
+    var register = document.getElementById('register');
+
+    registerBtn.addEventListener('click', function() {
+        register.scrollIntoView({ behavior: 'smooth' });
+    });
 
     if (elements.length > 0) {
         window.addEventListener('scroll', function () {

@@ -468,6 +468,9 @@ footer a{
         margin: 1rem 0;
     }
 
+    .reg-mobile{
+        display: flex;
+    }
 
     .reg-btn-mobile{
         background-color: #ffffff;
