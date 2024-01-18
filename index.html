@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <div class="container">
+        <section class="banner">
+            <img class="banner-image" src="./assets/banner.jpeg" alt="">
+            <div class="image-overlay">
+                <div class="webinar-title">
+                    <h4 class="payment">
+                        FREE WEBINAR
+                    </h4>
+                    <h1 class="title">Mastering JavaScript: <br>An In-Depth Webinar for Beginners</h1>
+                    <div class="reg-mobile">
+                        <button class="reg-btn-mobile" >Register Now 🎉</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="content">
+            <div class="info">
+                <div class="webinar-card">
+                    <p class="details">Webinar Details</p>
+                    <ul class="card-list">
+                        <li>
+                            <span class="material-symbols-outlined event-icons">event</span>
+                            <span class="" id="event_day">17/01/2024</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined event-icons">schedule</span>
+                            11:00 AM - 01:00 PM
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined event-icons">paid</span>
+                            Free
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined event-icons">location_on</span>
+                            Chennai
+                        </li>
+                    </ul>
+                </div>
+                <div class="what-you-learn">
+                    <p class="details">What You'll Learn</p>
+                    <ul class="learn-checks">
+                        <li>
+                            <span class="material-symbols-outlined event-icons">task_alt</span>
+                            Learn the Fundamentals (Variables, Loops, Functions, etc)
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined event-icons">task_alt</span>
+                            Master the Document Object Model & Events
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined event-icons">task_alt</span>
+                            OOP (Constructors, Prototypes, Classes)
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined event-icons">task_alt</span>
+                            Learn How JavaScript Works (Execution Context, Call Stack, Async JS)
+                        </li>
+                    </ul>
+                </div>
+                <div class="instructor">
+                    <p class="details">
+                        About Your instructor
+                    </p>
+                    <div class="ins-info">
+                        <img class="ins-pic" src="./assets/instructor.jpeg" alt="">
+                        <div class="ins-personal">
+                            <p class="ins-name">Sakthivel G</p>
+                            <p class="ins-desgn">UI Designer & Web Developer,</p>
+                            <p class="ins-company">ABC Tech Pvt. Ltd.</p>
+                        </div>
+                    </div>
+                    <ul class="ins-about">
+                        <li>
+                            <span class="material-symbols-outlined event-icons">fiber_smart_record</span>
+                            2+ years of experience in web development.
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined event-icons">fiber_smart_record</span>
+                            Expertise in JavaScript, HTML, CSS, and front-end frameworks.
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined event-icons">fiber_smart_record</span>
+                            Contributed to many notable open-source projects.
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined event-icons">fiber_smart_record</span>
+                            Passionate about mentoring developers to excel in their careers.
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <p class="details">Contact Us</p>
+                    <ul class="poc">
+                        <li>
+                            <span class="material-symbols-outlined event-icons">call</span>
+                            <a href="tel:+919876543210">+91 9876543210</a>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined event-icons">mail</span>
+                            <a href="mailto:mailtous@gmail.com">mailtous@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="register">
+                    <p class="reg-close">Registration closes in</p>
+                    <div class="timer-container">
+                        <div class="timer" id="timer">
+                            <h2 class="days" id="days">00</h2>
+                            <small>Days</small>
+                        </div>
+                        <p class="colon">:</p>
+                        <div class="timer" id="timer">
+                            <h2 class="hours" id="hours">00</h2>
+                            <small>Hours</small>
+                        </div>
+                        <p class="colon">:</p>
+                        <div class="timer" id="timer">
+                            <h2 class="minutes" id="minutes">00</h2>
+                            <small>Minutes</small>
+                        </div>
+                        <p class="colon">:</p>
+                        <div class="timer" id="timer">
+                            <h2 class="seconds" id="seconds">00</h2>
+                            <small>Seconds</small>
+                        </div>
+                    </div>
+                    <div class="form-cont">
+                        <p class="details">Register Now 🎉</p>
+                        <form action="#" class="form" onsubmit="validateForm(); return false;">
+                            <div class="name">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Enter Your Name">
+                                <p class="error" id="nameError"></p>
+                            </div>
+                            <div class="email">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" placeholder="Enter Your Email Address" id="email_id">
+                                <p class="error" id="emailError"></p>
+                            </div>
+                            <div class="acknowledge">
+                                <input type="checkbox" name="acknowledge" id="acknowledge">
+                                <p>I agree to these 
+                                    <a class="ack-terms" href="#">Terms & Conditions</a>
+                                </p>
+                            </div>
+                            <p class="error" id="acknowledgeError"></p>
+                            <button type="submit">Save your seat now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="successPopup" class="popup">
+            <div class="pop-content">
+                <p>Registered successfully! 🎉</p>
+                <span onclick="closePopup()" class="material-symbols-outlined event-icons close-icon">close</span>
+            </div>
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+        </div>
+        <footer>
+            <p>© Copyrights reserved</p>
+            <div class="terms-privacy">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
